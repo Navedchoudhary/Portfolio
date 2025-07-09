@@ -1,18 +1,93 @@
+/* Base styling for all screen sizes */
 body {
   background-color: #f9f9f9;
   font-family: 'Segoe UI', sans-serif;
+  padding: 0 10px;
+  margin: 0;
 }
 
-h1, h2 {
+h1, h2, h5 {
   font-weight: bold;
+  color: #222;
 }
 
-.card {
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  border-radius: 10px;
+p {
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
   margin-right: 8px;
+  word-break: break-word;
+}
+
+.btn {
+  margin-bottom: 10px;
+}
+
+.card {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card-img-top,
+.card video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ul.list-group {
+  margin-top: 15px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .btn {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .card .card-body {
+    text-align: center;
+  }
+
+  ul.list-group {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 577px) and (max-width: 768px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
